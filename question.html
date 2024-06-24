@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    
+    body{
+        margin: 0px;
+        padding: 0px;
+        width: 700px;
+        height: 700px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-image: url(lv.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    h1{
+        position: relative;
+        left: 400px;
+    }
+    button{
+        padding: 10px;
+        font-size: 25px;
+        position: relative;
+        top: 30px;
+        left: 400px;
+        margin: 30px;
+        cursor: pointer;
+        background: transparent;
+        border-radius: 20%;
+
+    }
+</style>
+<body>
+    <div>
+        <h1>DO YOU LOVE ME</h1>
+        <div>
+            <button onclick="add()">YES</button>
+            <button id="movebutton">NO</button>
+        </div>
+    </div>
+    <div id="yes">
+
+    </div>
+</body>
+<script>
+    const button=document.getElementById('movebutton');
+    button.addEventListener('mouseover',() => {
+        const x=Math.random()*(1000-button.offsetWidth);
+        const y=Math.random()*(300-button.offsetHeight);
+        button.style.left=`${x}px`;
+        button.style.top=`${y}px`;
+    });
+    console.log(window.innerHeight);
+    console.log(button.offsetHeight);
+    console.log(window.innerWidth);
+    console.log(button.offsetWidth)
+    function add()
+    {
+        window.location.href='me.html';
+    }
+</script>
+</html>
